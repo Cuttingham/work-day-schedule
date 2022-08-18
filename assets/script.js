@@ -25,14 +25,11 @@ else{
 
 saveBtn.click(function(){
     saveMessages();
-    // var userInput =textarea.val();  //this button works
-    // localStorage.setItem("userInput",JSON.stringify(userInput));
-    // console.log(userInput);
+
 });
 
 function saveMessages(event){
 
-    // document.body.children[1].children[1].children[1]
 
     for(i=0;i<9;i++){
         console.log( document.body.children[1].children[i].children[1].value);
@@ -40,18 +37,7 @@ function saveMessages(event){
         savedData.push(document.body.children[1].children[i].children[1].value)
     }
     console.log(savedData);
-    // var userInputs={
-    //     nineMemo: document.getElementById('9am').value,
-    //     tenMemo: document.getElementById('10am').value,
-    //     elevenMemo:document.getElementById('11am').value,
-    //     twelveMemo:document.getElementById('12pm').value,
-    //     oneMemo:document.getElementById('1pm').value,
-    //     twoMemo:document.getElementById('2pm').value,
-    //     threeMemo:document.getElementById('3pm').value,
-    //     fourMemo:document.getElementById('4pm').value,
-    //     fiveMemo:document.getElementById('5pm').value,
-    // }
-    // console.log(nineMemo);
+  
     localStorage.setItem("savedData",JSON.stringify(savedData));
 
 
